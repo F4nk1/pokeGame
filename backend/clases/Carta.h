@@ -1,11 +1,12 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<Tipo.h>
 class Carta{
 private:
-    int Id;
+    int IdPokemon;
     std::string Nombre;
-    std::vector<std::string>Tipos;
+    std::vector<Tipo>Tipos;
     int HpMax;
     int Hp;
     int Ataque;
@@ -19,9 +20,9 @@ private:
 
 
 public:
-    Carta(int id,
+    Carta(int IdPokemon,
         const std::string& nombre,
-        const std::vector<std::string>& tipos,
+        const std::vector<Tipo>& tipos,
         int hpMax,
         int hp,
         int ataque,
@@ -37,7 +38,7 @@ public:
     // Getters
     int getId() const;
     std::string getNombre() const;
-    std::vector<std::string> getTipos() const;
+    std::vector<Tipo> getTipos() const;
     int getHpMax() const;
     int getHp() const;
     int getAtaque() const;

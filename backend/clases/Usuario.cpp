@@ -22,13 +22,13 @@ std::string Usuario::getPasswordHash() const {
 }
 // Setters
 void Usuario::setUsername(const std::string& username) {
-    Username = username;
+    this->Username = username;
 }
 void Usuario::setEmail(const std::string& email) {
-    Email = email;
+    this->Email = email;
 }
 void Usuario::setPasswordHash(const std::string& passwordHash) {
-    PasswordHash = passwordHash;
+    this->PasswordHash = passwordHash;
 }
 
 // Otros métodos

@@ -2,7 +2,7 @@
 
 class Mazo {
 private:
-    std::vector<Carta> cartas;
+    std::vector<Carta> Cartas;
 public:
     Mazo(std::vector<Carta> &cartas);
     
@@ -19,6 +19,6 @@ public:
     void AgregarCarta(const Carta& carta);
     void EliminarCarta(int id);
     void Barajar();
-
-
+    int CartasVivas() const;
+    void PasarCarta(Mazo &destino);
 };

@@ -1,7 +1,9 @@
 
 #include "Jugador.h"
 
-Jugador::Jugador(const Usuario& usuario_, const Mazo& mazo_, const Mazo& mano_)
+Jugador::Jugador(const Usuario& usuario_,
+    const Mazo& mazo_, 
+    const Mazo& mano_)
     : usuario(usuario_), mazo(mazo_), mano(mano_) {}
 
 // Getters

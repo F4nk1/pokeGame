@@ -9,13 +9,13 @@ Carta::Carta(int id,
     int ataqueEspecial,
     int defensa,
     int defensaEspecial,
-    const std::string& habilidad,
-    const std::vector<std::string>& movimientos,
+    Habilidad& habilidad,
+    const std::vector<Movimiento>& movimientos,
     const std::string& miniatura,
     const std::string& descripcion)
     : IdPokemon(id), Nombre(nombre), Tipos(tipos), HpMax(hpMax), Hp(hp),
       Ataque(ataque), AtaqueEspecial(ataqueEspecial), Defensa(defensa),
-      DefensaEspecial(defensaEspecial), Habilidad(habilidad),
+      DefensaEspecial(defensaEspecial), Habilidad_(habilidad),
       Movimientos(movimientos), Miniatura(miniatura), Descripcion(descripcion) {}
 
 
@@ -52,11 +52,11 @@ int Carta::getDefensaEspecial()const{
     return DefensaEspecial;
 }
 
-std::string Carta::getHabilidad()const{
-    return Habilidad;
+Habilidad Carta::getHabilidad()const{
+    return Habilidad_;
 }
 
-std::vector<std::string> Carta::getMovimientos()const{
+std::vector<Movimiento> Carta::getMovimientos()const{
     return Movimientos;
 }
 
@@ -90,11 +90,11 @@ void Carta::setDefensaEspecial(int defensaEspecial){
     this->DefensaEspecial=defensaEspecial;
 }
 
-void Carta::setHabilidad(const std::string& habilidad){
-    this->Habilidad=habilidad;
+void Carta::setHabilidad(Habilidad& habilidad){
+    this->Habilidad_=habilidad;
 }
 
-void Carta::setMovimientos(const std::vector<std::string>&movimientos){
+void Carta::setMovimientos(const std::vector<Movimiento>&movimientos){
     this->Movimientos=movimientos;
 }
 

@@ -2,6 +2,8 @@
 #include<string>
 #include<vector>
 #include<Tipo.h>
+#include<Movimiento.h>
+#include<Habilidad.h>
 class Carta{
 private:
     int IdPokemon;
@@ -13,8 +15,8 @@ private:
     int AtaqueEspecial;
     int Defensa;
     int DefensaEspecial;
-    std::string Habilidad;
-    std::vector<std::string>Movimientos;
+    Habilidad Habilidad_;
+    std::vector<Movimiento>Movimientos;
     std::string Miniatura;
     std::string Descripcion;
 
@@ -29,8 +31,8 @@ public:
         int ataqueEspecial,
         int defensa,
         int defensaEspecial,
-        const std::string& habilidad,
-        const std::vector<std::string>& movimientos,
+        Habilidad& habilidad,
+        const std::vector<Movimiento>& movimientos,
         const std::string& miniatura,
         const std::string& descripcion);
 
@@ -45,8 +47,8 @@ public:
     int getAtaqueEspecial() const;
     int getDefensa() const;
     int getDefensaEspecial() const;
-    std::string getHabilidad() const;
-    std::vector<std::string> getMovimientos() const;
+    Habilidad getHabilidad() const;
+    std::vector<Movimiento> getMovimientos() const;
     std::string getMiniatura() const;
     std::string getDescripcion() const;
 
@@ -57,8 +59,8 @@ public:
     void setDefensa(int defensa);
     void setAtaqueEspecial(int ataqueEspecial);
     void setDefensaEspecial(int defensaEspecial);
-    void setHabilidad(const std::string& habilidad);
-    void setMovimientos(const std::vector<std::string>& movimientos);
+    void setHabilidad(Habilidad& habilidad);
+    void setMovimientos(const std::vector<Movimiento>& movimientos);
     void setMiniatura(const std::string& miniatura);
     void setDescripcion(const std::string& descripcion);
     

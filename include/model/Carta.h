@@ -1,4 +1,3 @@
-#include<iostream>
 #include<string>
 #include<vector>
 #include<Tipo.h>
@@ -15,14 +14,14 @@ private:
     int AtaqueEspecial;
     int Defensa;
     int DefensaEspecial;
-    Habilidad Habilidad_;
+    Habilidad IdHabilidad;
     std::vector<Movimiento>Movimientos;
     std::string Miniatura;
     std::string Descripcion;
 
 
 public:
-    Carta(int IdPokemon,
+    Carta(int idPokemon,
         const std::string& nombre,
         const std::vector<Tipo>& tipos,
         int hpMax,
@@ -31,7 +30,7 @@ public:
         int ataqueEspecial,
         int defensa,
         int defensaEspecial,
-        Habilidad& habilidad,
+        Habilidad& idHabilidad,
         const std::vector<Movimiento>& movimientos,
         const std::string& miniatura,
         const std::string& descripcion);
@@ -47,7 +46,7 @@ public:
     int getAtaqueEspecial() const;
     int getDefensa() const;
     int getDefensaEspecial() const;
-    Habilidad getHabilidad() const;
+    Habilidad getIdHabilidad() const;
     std::vector<Movimiento> getMovimientos() const;
     std::string getMiniatura() const;
     std::string getDescripcion() const;
@@ -59,13 +58,13 @@ public:
     void setDefensa(int defensa);
     void setAtaqueEspecial(int ataqueEspecial);
     void setDefensaEspecial(int defensaEspecial);
-    void setHabilidad(Habilidad& habilidad);
+    void setIdHabilidad(Habilidad& idHabilidad);
     void setMovimientos(const std::vector<Movimiento>& movimientos);
     void setMiniatura(const std::string& miniatura);
     void setDescripcion(const std::string& descripcion);
     
     
-    // Otros métodos
+    // Otros metodos
     int tomarDanio(int danio);
     int curar(int cantidad);
     bool estaVivo() const;

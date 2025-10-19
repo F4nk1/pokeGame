@@ -9,13 +9,13 @@ Carta::Carta(int id,
     int ataqueEspecial,
     int defensa,
     int defensaEspecial,
-    Habilidad& habilidad,
+    Habilidad& idHabilidad,
     const std::vector<Movimiento>& movimientos,
     const std::string& miniatura,
     const std::string& descripcion)
     : IdPokemon(id), Nombre(nombre), Tipos(tipos), HpMax(hpMax), Hp(hp),
       Ataque(ataque), AtaqueEspecial(ataqueEspecial), Defensa(defensa),
-      DefensaEspecial(defensaEspecial), Habilidad_(habilidad),
+      DefensaEspecial(defensaEspecial), IdHabilidad(idHabilidad),
       Movimientos(movimientos), Miniatura(miniatura), Descripcion(descripcion) {}
 
 
@@ -52,8 +52,8 @@ int Carta::getDefensaEspecial()const{
     return DefensaEspecial;
 }
 
-Habilidad Carta::getHabilidad()const{
-    return Habilidad_;
+Habilidad Carta::getIdHabilidad()const{
+    return IdHabilidad;
 }
 
 std::vector<Movimiento> Carta::getMovimientos()const{
@@ -90,8 +90,8 @@ void Carta::setDefensaEspecial(int defensaEspecial){
     this->DefensaEspecial=defensaEspecial;
 }
 
-void Carta::setHabilidad(Habilidad& habilidad){
-    this->Habilidad_=habilidad;
+void Carta::setIdHabilidad(Habilidad& idHabilidad){
+    this->IdHabilidad=idHabilidad;
 }
 
 void Carta::setMovimientos(const std::vector<Movimiento>&movimientos){
